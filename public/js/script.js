@@ -33,7 +33,7 @@ function getSelectionCharOffsetsWithin() {
 /*
  * Run the callback when something has been selected with the data
  * passed in containing the paragraph id and the start and end character
- * positions
+ * position
  */
 function addSelectListener(callback) {
 	$(document.body).bind('mouseup', function(e){
@@ -42,3 +42,9 @@ function addSelectListener(callback) {
 		callback(sel)
 	});
 }
+
+$(function(){
+	$( "textarea" ).each(function(){
+		$(this).autosize({append:"\n"})
+	});
+});
