@@ -13,11 +13,23 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('index');
 });
 
 Route::get('js-test', function(){
 
 		return View::make('js-test');
+
+});
+
+Route::get('article', function(){
+	
+	return View::make('article');
+	
+});
+
+Route::get('test', function(){
+
+	return View::make('test');
 
 });

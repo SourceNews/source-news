@@ -824,26 +824,26 @@ a {
 /* Bootstrap Glyphicons (Kindly provided by http://glyphicons.com/ via Bootstrap) */
 @font-face {
   font-family: 'Glyphicons';
-  src: url('../fonts/glyphicons/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/glyphicons/glyphicons-halflings-regular.woff') format('woff'),
-      url('../fonts/glyphicons/glyphicons-halflings-regular.ttf') format('truetype'),
-      url('../fonts/glyphicons/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  src: url('/fonts/glyphicons/glyphicons-halflings-regular.eot');
+  src: url('/fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/glyphicons/glyphicons-halflings-regular.woff') format('woff'),
+      url('/fonts/glyphicons/glyphicons-halflings-regular.ttf') format('truetype'),
+      url('/fonts/glyphicons/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 
 @font-face {
   font-family: 'Raleway-Light';
-  src: url('./fonts/raleway/Raleway-Light.ttf');
+  src: url('/fonts/raleway/Raleway-Light.ttf');
 }
 
 @font-face {
   font-family: 'Raleway-Medium';
-  src: url('./fonts/raleway/Raleway-Medium.ttf');
+  src: url('/fonts/raleway/Raleway-Medium.ttf');
 }
 
 @font-face {
   font-family: 'Raleway-Bold';
-  src: url('./fonts/raleway/Raleway-SemiBold.ttf');
+  src: url('/fonts/raleway/Raleway-SemiBold.ttf');
 }
 
 .glyphicon {
@@ -1082,7 +1082,7 @@ body {
 }
 
 .login {
-  background-image: url(../img/sea.jpg);
+  background-image: url(/img/sea.jpg);
   background-size: 100%;
   background-position: top center;
   background-repeat: no-repeat;
