@@ -1108,6 +1108,7 @@ body {
   display: block;
   margin: 20px;
   cursor: pointer;
+  color: #7a8da2;
 }
 
 .back-btn:hover,
@@ -1319,9 +1320,21 @@ article p {
     Comments
 ========================================================================== */
 
-.comment-list {
+.comments-container {
   width: 300px;
+}
+
+.comment-list {
+  float: left;
+  margin-top: 10px;
   border-top: 2px solid #e0e0e0;
+}
+
+.comments-count {
+  float: right;
+  color: #c0c0c0;
+  font-family: 'Raleway-SemiBold', Helvetica, Arial, sans-serif;
+  font-size: 12px;
 }
 
 .comment {
@@ -1431,6 +1444,26 @@ article p {
   font-family: 'Raleway-Medium', Helvetica, Arial, sans-serif;
   font-size: 13px;
   height: 20px;
+}
+
+.comment-add {
+  float: right;
+  margin-top: 15px;
+  font-family: 'Raleway-Medium', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #c0c0c0;
+}
+
+.comment-add .glyphicon {
+  color: #c0c0c0;
+  margin-right: 8px;
+}
+
+.comment-add:hover,
+.comment-add:hover .glyphicon {
+  color: #000000;
 }
 
 /* Image circle */
