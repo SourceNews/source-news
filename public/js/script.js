@@ -7,11 +7,9 @@ function getSelectionCharOffsetsWithin() {
 	if (typeof window.getSelection != "undefined") {
 		range = window.getSelection().getRangeAt(0);
 		if (range.startContainer !== range.endContainer) {
-			console.log("Not the same");
 			return;
 		}
 		if (range.toString().length === 0) {
-			console.log("Nothing selected");
 			return;
 		}
 		priorRange = range.cloneRange();
@@ -54,6 +52,17 @@ $(function() {
 	var $doc = $(document);
 	var $tooltip = $('.tooltip');
 	var $body = $('body');
+
+
+
+	$(".story").each(function(i,e){
+		var id = e.getAttribute("data-article_id");
+		if(typeof id != 'undefined'){
+			e.onclick = function(){
+				window.location.href = "/article/"+id;
+			};
+		}
+	});
 
 	/*
     * Text selection and tooltip functionality
@@ -160,8 +169,6 @@ $(function() {
 		$btn.text('Create Account');
 
 	});
-
-
 
 
 });
