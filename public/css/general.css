@@ -1064,6 +1064,10 @@ button:hover {
   margin-top: 10px;
 }
 
+.login .reg {
+  margin-top: 120px;
+}
+
 
 /* ==========================================================================
     Layout
@@ -1130,10 +1134,6 @@ body {
   color: #7a8da2;
 }
 
-.side form {
-  margin-top: 100px;
-}
-
 .form-buttons {
   margin-top: 25px;
 }
@@ -1197,22 +1197,20 @@ body {
   display: block;
   text-align: left;
   margin: 20px 6px;
+  color: #425060;
 }
 
 .login .signin .signin-btn {
-  color: #425060;
   margin-left: 30px;
+  color: #425060;
 }
 
 .login .signin .option {
   cursor: pointer;
+  color: #425060;
 }
 
-.login .signin .option.opened {
-
-}
-
-.login .signin .option:hover {
+.login .signin .option.open {
   color: #ffffff;
 }
 
