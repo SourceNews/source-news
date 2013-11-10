@@ -43,3 +43,12 @@ Route::group(array('before' => 'guest'),function(){
 });
 	
 
+Route::get('test', function(){
+
+	return View::make('test');
+
+});
+
+Route::post('register', array('before' => 'csrf', 'uses' => 'RegistrationController@store'));
+
+Route::get('loadrss', 'RssFeedController@loadRss');
