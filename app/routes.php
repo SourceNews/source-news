@@ -12,15 +12,13 @@
 */
 
 Route::group(array ('before' => 'auth'), function (){
-	Route::get('/feed/{id?}',  'FeedController@showFeed');
+	Route::get('feed/{id?}',  'FeedController@showFeed');
 	
 	Route::get('article/{id}', 'ArticleController@showArticle');
 	
-	Route::get('test', function(){
-		return View::make('test');
-	});
-	
-	Route::get('/logout', 'UserController@logout');
+	Route::get('loadrss', 'RssFeedController@loadRss');
+		
+	Route::get('logout', 'UserController@logout');
 		
  });
 
@@ -35,12 +33,5 @@ Route::group(array('before' => 'guest'),function(){
 });
 	
 
-Route::get('test', function(){
-
-	return View::make('test');
-
-});
-
 Route::post('register', array('before' => 'csrf', 'uses' => 'RegistrationController@store'));
 
-Route::get('loadrss', 'RssFeedController@loadRss');

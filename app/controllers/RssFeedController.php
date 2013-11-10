@@ -25,13 +25,9 @@ class RssFeedController extends \BaseController {
 	    // now fetch its (fresh) content
 	    $feedContent = $reader->readFeed($url, $feed, $last_modified);
 	    if($feed->save()){
-			
-	    } 	    	    
-	    
-	  //	$articles = $feedContent->getItems();
+			return Redirect::to('/feed/' . $feed->id);	    
+	    } 	    	    	    
 	}
 
-	function storeFeed($feed){
 
-	}
 }
