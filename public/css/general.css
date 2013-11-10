@@ -1561,6 +1561,16 @@ article p {
 .general-comments-container .comment {
   width: 394px;
   padding: 20px;
+  font-size: 13px;
+}
+
+.general-comments-container .desc {
+  display: block;
+  margin-top: 5px;
+}
+
+.general-comments-container .view .comment-add {
+  margin-right: 15px;
 }
 
 
@@ -1576,7 +1586,7 @@ article p {
 }
 
 .tooltip .bubble {
-  width: 40px;
+  width: 35px;
   height: 30px;
   background-color: #333333;
   -webkit-border-radius:3px;
@@ -1587,12 +1597,20 @@ article p {
 .tooltip .bubble .arrow {
   position:absolute;
   bottom: -6px;
-  left: 14px;
+  left: 10px;
   width:0;
   height:0;
   border-left:6px solid transparent;
   border-right:6px solid transparent; 
   border-top:6px solid #333333;
+}
+
+.tooltip .glyphicon {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 /* ==========================================================================
@@ -1699,7 +1717,7 @@ article p {
 }
 
 .comment .content {
-  width: 253px;
+  width: 344px;
 }
 
 .comment .column .indicator {

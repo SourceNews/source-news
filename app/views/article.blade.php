@@ -12,7 +12,7 @@
     <body class="article">
 
         <div class="tooltip">
-            <div class="bubble"><span class="arrow"></span></div>
+            <div class="bubble"><span class="glyphicon glyphicon-plus-sign"></span><span class="arrow"></span></div>
         </div>
         
     	<div class="side">
@@ -201,14 +201,17 @@
                                 </div>
                                 <div class="content">
                                     <span class="name">Henco Appel</span>
-                                    <div class="opinion">
-                                        <span class="choice">Agree</span>
-                                        <span class="separator">|</span>
-                                        <span class="choice">Disagree</span>
-                                    </div>
-                                    <textarea placeholder="What do you think?"></textarea>
+                                    <span class="desc">
+                                        Here is some comment
+                                        Here is some comment
+                                        Here is some comment
+                                        Here is some comment
+                                        Here is some comment
+                                    </span>
                                 </div>
                             </div>
+
+                        <div class="comment-add"><span class="glyphicon glyphicon-plus-sign"></span>Add a comment</div>
 
                         </div>
                         
@@ -237,14 +240,17 @@
                                 </div>
                                 <div class="content">
                                     <span class="name">Henco Appel</span>
-                                    <div class="opinion">
-                                        <span class="choice">Agree</span>
-                                        <span class="separator">|</span>
-                                        <span class="choice">Disagree</span>
-                                    </div>
-                                    <textarea placeholder="What do you think?"></textarea>
+                                    <span class="desc">
+                                        Here is some comment
+                                        Here is some comment
+                                        Here is some comment
+                                        Here is some comment
+                                        Here is some comment
+                                    </span>
                                 </div>
                             </div>
+
+                        <div class="comment-add"><span class="glyphicon glyphicon-plus-sign"></span>Add a comment</div>
 
                         </div>
                         

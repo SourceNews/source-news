@@ -38,8 +38,10 @@ function getSelectionCharOffsetsWithin() {
 function addSelectListener(callback) {
 	$(document.body).bind('mouseup', function(e){
 		var sel = getSelectionCharOffsetsWithin();
-		sel.name = e.target.getAttribute("name");
-		callback(sel);
+		if(typeof sel != 'undefined'){
+			sel.name = e.target.getAttribute("name");
+			callback(sel);
+		}
 	});
 }
 
