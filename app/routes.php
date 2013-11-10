@@ -22,6 +22,12 @@ Route::get('js-test', function(){
 
 });
 
+Route::get('feed', function(){
+
+	return View::make('feed');
+
+});
+
 Route::get('article', function(){
 	
 	return View::make('article');

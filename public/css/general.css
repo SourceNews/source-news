@@ -1078,6 +1078,7 @@ button:hover {
 }
 
 body {
+  position: relative;
   margin: 0;
 }
 
@@ -1209,18 +1210,34 @@ body {
   height: 1500px;
 }
 
-/* ==========================================================================
-    Article Side
-========================================================================== */
-
 .article {
   background-color: #fbfbfb;
 }
 
+.feed .side,
 .article .side {
   width: 220px;
   font-size: 14px;
 }
+
+.feed .main,
+.article .main {
+  padding: 100px;
+  left: 330px;
+}
+
+
+/* ==========================================================================
+    Feed
+========================================================================== */
+
+
+
+
+
+/* ==========================================================================
+    Article Side
+========================================================================== */
 
 .article .source-info {
   margin-top: 80px;
@@ -1240,11 +1257,6 @@ body {
   margin-right: 15px;
   font-size: 12px;
   text-transform: uppercase;
-}
-
-.article .main {
-  padding: 100px;
-  left: 330px;
 }
 
 .article .stats {
@@ -1315,6 +1327,37 @@ article p {
   margin: 15px 0;
 }
 
+
+/* ==========================================================================
+    Tooltips
+========================================================================== */
+
+.tooltip {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.tooltip .bubble {
+  width: 40px;
+  height: 30px;
+  background-color: #333333;
+  -webkit-border-radius:3px;
+      -moz-border-radius:3px;
+        border-radius:3px;
+}
+
+.tooltip .bubble .arrow {
+  position:absolute;
+  bottom: -6px;
+  left: 14px;
+  width:0;
+  height:0;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent; 
+  border-top:6px solid #333333;
+}
 
 /* ==========================================================================
     Comments
