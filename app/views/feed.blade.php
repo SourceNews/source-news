@@ -13,6 +13,7 @@
         
         <div class="side">
             <div class="logo">source<span>news</span></div>
+          	<button><a href="/logout">Logout</a></button>
             
             <div class="categories">
                 <span class="title">Categories</span>
