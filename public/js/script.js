@@ -47,17 +47,33 @@ function addSelectListener(callback) {
 var mouseX;
 var mouseY;
 
-$(function(){
+$(function() {
 
+	var $doc = $(document);
 	var $tooltip = $('.tooltip');
+	var $body = $('body');
 
-	$(document).mousemove( function(e) {
+	/*
+    * Text selection and tooltip functionality
+    *
+    */
+
+	$doc.mousemove( function(e) {
 	   mouseX = e.pageX; 
 	   mouseY = e.pageY;
 	});
 
-	$(document).on('mousedown', function(e) {
+	$body.on('mousedown', function(e) {
+
+		// hide tooltip
 	   $tooltip.css('opacity', 0);
+
+	   if (e.target.id == "comments-sidebar") {
+	   	return;
+	   }
+	   $('.article').removeClass('commenting');
+    	$("#comments-sidebar").css('top', 'auto');
+
 	});
 
     addSelectListener(function(data){
@@ -73,7 +89,36 @@ $(function(){
         //data && alert(data.name + " " + data.start + "->" + data.end);
     });
 
+
+
+
+    /*
+    * Fade in comment box and fade out content
+    *
+    */
+
+    $tooltip.on('click', function() {
+    	$('html, body').animate({
+	        scrollTop: mouseY - 100
+	    }, 1000);
+    	$("#comments-sidebar").css('top', mouseY).queue();
+    	$('.article').addClass('commenting');
+    });
+
+
+
+
+
+    /*
+    * Textarea resizing.
+    *
+    */
+
 	$( "textarea" ).each(function(){
 		$(this).autosize({append:"\n"})
 	});
+
+
+
+
 });

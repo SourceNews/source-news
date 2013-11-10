@@ -41,9 +41,11 @@
 	                </div>
 				{{ Form::close() }}	           
     	</div>
+
     	<div class="main">
-    		<div class="intro"></div>
+    		<div class="intro">Source News is a unique platform that provides an alternative way to reading the news. We encourage readers to support or question the views of news corporations and journalists through an effective inline commenting system and elegant interface, giving future readers a more balanced opinion across a broad range of topics. Our aim is to leverage discussion and better inform the world.</div>
     	</div>
+
     </body>
 
 
