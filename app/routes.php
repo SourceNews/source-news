@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(array ('before' => 'auth'), function (){
+/*Route::group(array ('before' => 'auth'), function (){ */
 	Route::get('/feed', function () {
 		return View::make('feed');
 	});
@@ -30,7 +30,7 @@ Route::group(array ('before' => 'auth'), function (){
 	
 	Route::get('/logout', 'UserController@logout');
 		
-});
+/* }); */
 
 
 Route::get('/', function(){
