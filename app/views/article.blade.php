@@ -60,8 +60,6 @@
                     </div>
                 </div>
 
-                <div class="comment-add"><span class="glyphicon glyphicon-plus-sign"></span>Add a comment</div>
-
             </div>
 
     	</div>
