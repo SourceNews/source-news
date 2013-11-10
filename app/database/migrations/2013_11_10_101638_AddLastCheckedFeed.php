@@ -14,6 +14,7 @@ class AddLastCheckedFeed extends Migration {
 	{
 		Schema::table('feeds', function(Blueprint $table){
 			$table->timestamp('last_checked')->after('image_id');
+			$table->unique('url');
 		});
 	}
 
