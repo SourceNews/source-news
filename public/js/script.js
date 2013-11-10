@@ -57,7 +57,8 @@ $(function() {
 
 	$(".story").each(function(i,e){
 		var id = e.getAttribute("data-article_id");
-		if(typeof id != 'undefined'){
+		console.log(id);
+		if(id !== undefined && id !== null){
 			e.onclick = function(){
 				window.location.href = "/article/"+id;
 			};

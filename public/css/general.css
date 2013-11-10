@@ -1369,6 +1369,10 @@ body {
   overflow: scroll;
 }
 
+.feed.feed-2 .column {
+  width: 50%;
+}
+
 .feed::-webkit-scrollbar,
 .feed .column::-webkit-scrollbar {
   width: 0;
@@ -1536,6 +1540,10 @@ body {
   left: -350px;
 }
 
+.article #comments-sidebar .comment {
+  width: 355px;
+}
+
 .article h1 {
   width: 90%;
   font-size: 45px;
@@ -1563,6 +1571,7 @@ article p {
 .article .main {
   padding: 50px 0;
 }
+
 
 
 /* bottom comments */
@@ -1704,7 +1713,7 @@ article p {
   width: 235px;
 }
 
-.side .comment .desc {
+.comment .desc {
   display: block;
   margin-top: 5px;
 }
@@ -1713,6 +1722,7 @@ article p {
 
 .comments-container {
   width: 350px;
+  font-size: 13px;
 }
 
 .comment-list {
