@@ -39,11 +39,40 @@ function addSelectListener(callback) {
 	$(document.body).bind('mouseup', function(e){
 		var sel = getSelectionCharOffsetsWithin();
 		sel.name = e.target.getAttribute("name");
-		callback(sel)
+		callback(sel);
 	});
 }
 
+
+var mouseX;
+var mouseY;
+
 $(function(){
+
+	var $tooltip = $('.tooltip');
+
+	$(document).mousemove( function(e) {
+	   mouseX = e.pageX; 
+	   mouseY = e.pageY;
+	});
+
+	$(document).on('mousedown', function(e) {
+	   $tooltip.css('opacity', 0);
+	});
+
+    addSelectListener(function(data){
+
+    	$tooltip.css({
+    		'top' : mouseY - ($tooltip.height() + 25),
+    		'left' : mouseX  - ($tooltip.width() / 2)
+    	}).delay(200).queue(function(next) {
+			$tooltip.css('opacity', 1);
+			next();
+		});
+
+        //data && alert(data.name + " " + data.start + "->" + data.end);
+    });
+
 	$( "textarea" ).each(function(){
 		$(this).autosize({append:"\n"})
 	});
