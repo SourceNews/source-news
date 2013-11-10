@@ -19,7 +19,7 @@ class RegistrationController extends \BaseController {
 			
 			$attributes['password'] = Hash::make($attributes['password']);
 			if(is_object(User::create($attributes)))
-				return Redirect::to('article');
+				return Redirect::to('feed');
 		}
 		
 		return Redirect::to('/')
