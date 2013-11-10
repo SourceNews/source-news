@@ -16,6 +16,17 @@
     				<span class="option signup-btn">Register</span>
     				<span class="option signin-btn">Sign In</span>
     			</div>
+    			
+    			{{ Form::open(array('action' => 'RegistrationController@store')) }}
+    				<input type="text" name="username" value="{{ Input::old('username', '') }}" placeholder="Username"/>
+    					<span class="error">@if($errors->has('username')) {{ $errors->first('username') }} @endif</span>
+	    			<input type="password" name="password" placeholder="Password"/>
+	    				<span class="error">@if($errors->has('password')) {{ $errors->first('password') }} @endif</span>
+	                <div class="form-buttons">
+	                    <button type="subimit">Sign In</button>
+	                </div>
+				{{ Form::close() }}	           
+    		    			
 				{{ Form::open(array('action' => 'RegistrationController@store')) }}
     				<input type="text" name="username" value="{{ Input::old('username', '') }}" placeholder="Username"/>
     					<span class="error">@if($errors->has('username')) {{ $errors->first('username') }} @endif</span>
@@ -24,7 +35,7 @@
 	    			<input type="password" name="password" placeholder="Password"/>
 	    				<span class="error">@if($errors->has('password')) {{ $errors->first('password') }} @endif</span>
 	                <div class="form-buttons">
-	                    <button type="subimit">Sign In</button>
+	                    <button type="subimit">Register</button>
 	                    <button class="login-social first">Facebook</button>
 	                    <button class="login-social">Twitter</button>
 	                </div>
