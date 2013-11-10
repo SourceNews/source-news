@@ -31,17 +31,14 @@
         <div class="main">
 
             <div class="column">
-                <h1>{{$feedName}}</h1>
+                <h1>{{ $feed->title }}</h1>
 
                 <div class="list">
-                    {{"<div class=\"story\">
-                            <h2>$firstArticle</h2>
-                    </div>"}}
-                    @foreach ($articles as $a=>$p)
-                        {{"<div class=\"story\">
-                            <h2>$a</h2>
-                            <p>$p</p>
-                        </div>"}}
+                    @foreach ($articles->get() as $index => $article)
+                        <div class="story @if(!$index)top@endif" data-article_id="{{ $article->id }}">
+                            <h2>{{ $article->title }}</h2>
+                            <p>{{ $article->paragraphs()->first()->title }}</p>
+                        </div>
                     @endforeach
                 </div>
 
