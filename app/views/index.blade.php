@@ -12,20 +12,23 @@
     	<div class="side">
     		<div class="logo">source<span>news</span></div>
     		<div class="slogan">A place for everyone's opinion.</div>
-    		<form class="" name="" action="" method="">
     			<div class="signin">
     				<span class="option signup-btn">Register</span>
     				<span class="option signin-btn">Sign In</span>
     			</div>
-                <input type="text" placeholder="Username"/>
-                <input type="text" placeholder="Email"/>
-    			<input type="password" placeholder="Password"/>
-                <div class="form-buttons">
-                    <button>Sign In</button>
-                    <button class="login-social first">Facebook</button>
-                    <button class="login-social">Twitter</button>
-                </div>
-    		</form>
+				{{ Form::open(array('action' => 'RegistrationController@store')) }}
+    				<input type="text" name="username" value="{{ Input::old('username', '') }}" placeholder="Username"/>
+    					<span class="error">@if($errors->has('username')) {{ $errors->first('username') }} @endif</span>
+	                <input type="text" name="email" value="{{ Input::old('email', '') }}" placeholder="Email"/>
+	                   <span class="error">@if($errors->has('email')) {{ $errors->first('email') }} @endif</span>
+	    			<input type="password" name="password" placeholder="Password"/>
+	    				<span class="error">@if($errors->has('password')) {{ $errors->first('password') }} @endif</span>
+	                <div class="form-buttons">
+	                    <button type="subimit">Sign In</button>
+	                    <button class="login-social first">Facebook</button>
+	                    <button class="login-social">Twitter</button>
+	                </div>
+				{{ Form::close() }}	           
     	</div>
     	<div class="main">
     		<div class="intro"></div>

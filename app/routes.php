@@ -39,3 +39,5 @@ Route::get('test', function(){
 	return View::make('test');
 
 });
+
+Route::post('register', array('before' => 'csrf', 'uses' => 'RegistrationController@store'));
