@@ -37,7 +37,7 @@
                     @foreach ($articles->get() as $index => $article)
                         <div class="story @if(!$index)top@endif" data-article_id="{{ $article->id }}">
                             <h2>{{ $article->title }}</h2>
-                            <p>{{ $article->paragraphs()->first()->title }}</p>
+                            <p>{{ $article->paragraphs()->first()->text }}</p>
                         </div>
                     @endforeach
                 </div>
