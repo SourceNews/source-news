@@ -35,3 +35,5 @@ Route::get('test', function(){
 });
 
 Route::post('register', array('before' => 'csrf', 'uses' => 'RegistrationController@store'));
+
+Route::get('loadrss', 'RssFeedController@loadRss');
