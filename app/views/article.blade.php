@@ -16,7 +16,6 @@
         </div>
         
     	<div class="side">
-            <div class="logo">source<span>news</span></div>
             <div class="back-btn"><span class="glyphicon glyphicon-chevron-left"></span>Back to news feed</div>
             <div class="source-info">
                 <ul>
@@ -36,27 +35,64 @@
                     <span class="count">15</span>
                     <span class="stat-bar"><span class="bar-fill disagree"></span></span>
                 </div>
+                <div class="container">
+                    <span class="title top-comments">Top Comments</span>
+                </div>
             </div>
 
             <div class="comment-list">
+                
                 <div class="comment">
-                    <div class="vote-container">
-                        <div class="direction">
-                            <span class="count">18</span>
-                            <span class="glyphicon glyphicon-chevron-up green"></span>
-                        </div>
-                        <div class="direction">
-                            <span class="count">3</span>
-                            <span class="glyphicon glyphicon-chevron-down red"></span>
-                        </div>
-                    </div>
                     <div class="column">
                         <span class="image-circle"><img src="img/henco.jpg"></span>
                         <span class="indicator red"></span>
+                        <div class="vote-container">
+                            <div class="direction">
+                                <span class="count">18</span>
+                                <span class="glyphicon glyphicon-chevron-up green"></span>
+                            </div>
+                            <div class="direction">
+                                <span class="count">3</span>
+                                <span class="glyphicon glyphicon-chevron-down red"></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="content">
                         <span class="name">Henco Appel</span>
-                        <!-- COMMENT -->
+                        <span class="desc">
+                            Here is some comment
+                            Here is some comment
+                            Here is some comment
+                            Here is some comment
+                            Here is some comment
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <div class="column">
+                        <span class="image-circle"><img src="img/henco.jpg"></span>
+                        <span class="indicator red"></span>
+                        <div class="vote-container">
+                            <div class="direction">
+                                <span class="count">18</span>
+                                <span class="glyphicon glyphicon-chevron-up green"></span>
+                            </div>
+                            <div class="direction">
+                                <span class="count">3</span>
+                                <span class="glyphicon glyphicon-chevron-down red"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <span class="name">Henco Appel</span>
+                        <span class="desc">
+                            Here is some comment
+                            Here is some comment
+                            Here is some comment
+                            Here is some comment
+                            Here is some comment
+                        </span>
                     </div>
                 </div>
 
@@ -71,19 +107,19 @@
                     <div class="comments-count">35 Comments</div>
                     <div class="comment-list">
                         <div class="comment">
-                            <div class="vote-container">
-                                <div class="direction">
-                                    <span class="count">18</span>
-                                    <span class="glyphicon glyphicon-chevron-up green"></span>
-                                </div>
-                                <div class="direction">
-                                    <span class="count">3</span>
-                                    <span class="glyphicon glyphicon-chevron-down red"></span>
-                                </div>
-                            </div>
                             <div class="column">
                                 <span class="image-circle"><img src="img/henco.jpg"></span>
                                 <span class="indicator red"></span>
+                                <div class="vote-container">
+                                    <div class="direction">
+                                        <span class="count">18</span>
+                                        <span class="glyphicon glyphicon-chevron-up green"></span>
+                                    </div>
+                                    <div class="direction">
+                                        <span class="count">3</span>
+                                        <span class="glyphicon glyphicon-chevron-down red"></span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="content">
                                 <span class="name">Henco Appel</span>
@@ -97,19 +133,19 @@
                         </div>
 
                         <div class="comment">
-                            <div class="vote-container">
-                                <div class="direction">
-                                    <span class="count">3</span>
-                                    <span class="glyphicon glyphicon-chevron-up green"></span>
-                                </div>
-                                <div class="direction">
-                                    <span class="count">9</span>
-                                    <span class="glyphicon glyphicon-chevron-down red"></span>
-                                </div>
-                            </div>
                             <div class="column">
                                 <span class="image-circle"><img src="img/samir.jpg"></span>
                                 <span class="indicator green"></span>
+                                <div class="vote-container">
+                                    <div class="direction">
+                                        <span class="count">3</span>
+                                        <span class="glyphicon glyphicon-chevron-up green"></span>
+                                    </div>
+                                    <div class="direction">
+                                        <span class="count">9</span>
+                                        <span class="glyphicon glyphicon-chevron-down red"></span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="content">
                                 <span class="name">Samir Moussa</span>

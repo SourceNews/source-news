@@ -1114,7 +1114,8 @@ body {
 
 .back-btn {
   display: block;
-  margin: 20px;
+  text-align: left;
+  margin-bottom: 20px;
   cursor: pointer;
   color: #7a8da2;
 }
@@ -1402,6 +1403,10 @@ body {
   margin-bottom: 5px;
 }
 
+.article .stats .title.top-comments {
+  margin-top: 50px;
+}
+
 .article .stats .count {
   float: right;
   color: #5f748b;
@@ -1477,7 +1482,9 @@ article p {
 
 .article .main {
   position: relative;
-  left: 0px;
+  left: 30px;
+  width: 1050px;
+  padding-top: 50px;
 }
 
 
@@ -1523,8 +1530,11 @@ article p {
 /* sidebar top comments */
 
 .side .comment-list {
-  margin: 50px 0;
+  width: 100%;
+  margin-bottom: 50px;
   text-align: left;
+  border-color: #36414e;
+  border-width: 1px;
 }
 
 .side .comment .name,
@@ -1533,9 +1543,18 @@ article p {
   color: #ffffff;
 }
 
+.side .comment {
+  border-color: #36414e;
+}
+
 .side .comment .content {
-  width: 170px;
-} 
+  width: 235px;
+}
+
+.side .comment .desc {
+  display: block;
+  margin-top: 5px;
+}
 
 /* standard comments */
 
@@ -1568,9 +1587,10 @@ article p {
 
 .comment .vote-container {
   float: left;
+  clear: left;
+  width: 35px;
   text-align: right;
-  width: 50px;
-  margin-right: 15px;
+  margin-top: 10px;
 }
 
 .comment .vote-container .count {
@@ -1603,7 +1623,7 @@ article p {
 }
 
 .comment .content {
-  width: 235px;
+  width: 253px;
 }
 
 .comment .column .indicator {
