@@ -10,12 +10,14 @@
         <script type='text/javascript' src="/js/script.js"></script>
     </head>
 
-    <body class="article">
+    <body class="test">
     	<div class="side">
     		<div class="logo">source<span>news</span></div>
     	</div>
     	<div class="main">
+
             <div class="comments-sidebar">
+                
                 <div class="comments-container">
                     <div class="comments-count">35 Comments</div>
                     <div class="comment-list">

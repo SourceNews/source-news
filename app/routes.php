@@ -16,9 +16,7 @@
 		return View::make('feed');
 	});
 	
-	Route::get('article', function(){
-		return View::make('article');
-	});
+	Route::get('article/{id}', 'ArticleController@showArticle');
 	
 	Route::get('test', function(){
 		return View::make('test');

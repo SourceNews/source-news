@@ -1080,6 +1080,7 @@ button:hover {
 body {
   position: relative;
   margin: 0;
+  max-width: 1300px;
 }
 
 .login {
@@ -1106,9 +1107,15 @@ body {
   overflow: scroll;
 }
 
+.side::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 .back-btn {
   display: block;
-  margin: 20px;
+  text-align: left;
+  margin-bottom: 20px;
   cursor: pointer;
   color: #7a8da2;
 }
@@ -1219,8 +1226,11 @@ body {
 
 .feed .side,
 .article .side {
-  width: 220px;
   font-size: 14px;
+}
+
+.feed .side {
+  width: 220px;
 }
 
 .feed .main,
@@ -1282,6 +1292,12 @@ body {
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   overflow: scroll;
+}
+
+.feed::-webkit-scrollbar,
+.feed .column::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .feed .column.col-1 {
@@ -1387,6 +1403,10 @@ body {
   margin-bottom: 5px;
 }
 
+.article .stats .title.top-comments {
+  margin-top: 50px;
+}
+
 .article .stats .count {
   float: right;
   color: #5f748b;
@@ -1421,10 +1441,6 @@ body {
     Article Content
 ========================================================================== */
 
-.article.commenting {
-  overflow: hidden;
-}
-
 /* comments sidebar */
 
 #comments-sidebar {
@@ -1435,7 +1451,9 @@ body {
 }
 
 .article.commenting #comments-sidebar {
+  z-index: 2;
   opacity: 1;
+  left: 50px;
 }
 
 .article h1 {
@@ -1458,14 +1476,15 @@ article p {
   margin: 15px 0;
 }
 
-.article .main {
-  position: relative;
-  left: 0px;
+.article.commenting .side {
+  opacity: 0
 }
 
-.article.commenting .main {
-  left: 350px;
-  -webkit-transition: all 0.8s ease-in-out;
+.article .main {
+  position: relative;
+  left: 30px;
+  width: 1050px;
+  padding-top: 50px;
 }
 
 
@@ -1504,22 +1523,43 @@ article p {
     Comments
 ========================================================================== */
 
+.test .side {
+  display: none;
+}
+
 /* sidebar top comments */
 
 .side .comment-list {
-  margin: 50px 0;
+  width: 100%;
+  margin-bottom: 50px;
   text-align: left;
+  border-color: #36414e;
+  border-width: 1px;
 }
 
 .side .comment .name,
-.side .comment .opinion {
+.side .comment .opinion,
+.side .comment .vote-container .glyphicon {
   color: #ffffff;
+}
+
+.side .comment {
+  border-color: #36414e;
+}
+
+.side .comment .content {
+  width: 235px;
+}
+
+.side .comment .desc {
+  display: block;
+  margin-top: 5px;
 }
 
 /* standard comments */
 
 .comments-container {
-  width: 300px;
+  width: 350px;
 }
 
 .comment-list {
@@ -1546,11 +1586,11 @@ article p {
 }
 
 .comment .vote-container {
-  position: absolute;
+  float: left;
+  clear: left;
+  width: 35px;
   text-align: right;
-  top: 5px;
-  right: 320px;
-  width: 50px;
+  margin-top: 10px;
 }
 
 .comment .vote-container .count {
@@ -1579,12 +1619,11 @@ article p {
 }
 
 .comment .column {
-  width: 12%;
-  margin-right: 5%
+  margin-right: 5px;
 }
 
 .comment .content {
-  width: 83%;
+  width: 253px;
 }
 
 .comment .column .indicator {
