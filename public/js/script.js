@@ -120,6 +120,40 @@ $(function() {
 	});
 
 
+	/*
+    * Login 
+    *
+    */
+
+	$( ".signin-btn" ).on('click', function(){
+
+		var $form = $('form');
+		var $emailField = $('#email_field');
+
+		$emailField.hide();
+
+		$(this).addClass('open');
+		$( ".signup-btn" ).removeClass('open');
+
+		$form.attr('action', '/login');
+
+	});
+
+	$( ".signup-btn" ).on('click', function(){
+
+		var $form = $('form');
+		var $emailField = $('#email_field');
+
+		$emailField.show();
+
+		$(this).addClass('open');
+		$( ".signin-btn" ).removeClass('open');
+
+		$form.attr('action', '/register');
+
+	});
+
+
 
 
 });
