@@ -18,8 +18,11 @@ class RegistrationController extends \BaseController {
 		if($validator->passes()){
 			
 			$attributes['password'] = Hash::make($attributes['password']);
-			if(is_object(User::create($attributes)))
-				return Redirect::to('article');
+			if(is_object(User::create($attributes))){
+				if(Auth::attempt(array ('username' => Input::get('username'), 'password' => Input::get('password')))){
+					return Redirect::intended('/feed');
+				}
+			}
 		}
 		
 		return Redirect::to('/')

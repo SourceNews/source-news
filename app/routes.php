@@ -11,7 +11,7 @@
 |
 */
 
-/*Route::group(array ('before' => 'auth'), function (){ */
+Route::group(array ('before' => 'auth'), function (){
 	Route::get('/feed/{id?}',  'FeedController@showFeed');
 	
 	Route::get('article/{id}', 'ArticleController@showArticle');
@@ -22,14 +22,14 @@
 	
 	Route::get('/logout', 'UserController@logout');
 		
-/* }); */
-
+ });
 
 Route::get('/', function(){
 	return View::make('index');
 });
 	
 Route::group(array('before' => 'guest'),function(){
+	Route::get('login', function(){ return View::make('index'); });
 	Route::post('login', array('before' => 'csrf', 'uses' => 'UserController@login'));
 	Route::post('register', array('before' => 'csrf', 'uses' => 'RegistrationController@store'));
 });
