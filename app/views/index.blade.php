@@ -17,7 +17,7 @@
     				<span class="option signin-btn">Sign In</span>
     			</div>
     			
-    			{{ Form::open(array('action' => 'RegistrationController@store')) }}
+    			{{ Form::open(array('action' => 'UserController@login')) }}
     				<input type="text" name="username" value="{{ Input::old('username', '') }}" placeholder="Username"/>
     					<span class="error">@if($errors->has('username')) {{ $errors->first('username') }} @endif</span>
 	    			<input type="password" name="password" placeholder="Password"/>

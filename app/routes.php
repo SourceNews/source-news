@@ -11,28 +11,37 @@
 |
 */
 
-Route::get('/', function()
-{
+Route::group(array ('before' => 'auth'), function (){
+	Route::get('/feed', function () {
+		return View::make('feed');
+	});
+	
+	Route::get('article', function(){
+		return View::make('article');
+	});
+	
+	Route::get('test', function(){
+		return View::make('test');
+	});
+	
+	Route::get('js-test', function(){
+		return View::make('js-test');
+	});
+	
+	Route::get('/logout', 'UserController@logout');
+		
+});
+
+
+Route::get('/', function(){
 	return View::make('index');
 });
-
-Route::get('js-test', function(){
-
-		return View::make('js-test');
-
-});
-
-Route::get('feed', function(){
-
-	return View::make('feed');
-
-});
-
-Route::get('article', function(){
 	
-	return View::make('article');
-	
+Route::group(array('before' => 'guest'),function(){
+	Route::post('login', array('before' => 'csrf', 'uses' => 'UserController@login'));
+	Route::post('register', array('before' => 'csrf', 'uses' => 'RegistrationController@store'));
 });
+	
 
 Route::get('test', function(){
 
