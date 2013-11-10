@@ -14,7 +14,13 @@ class AddLastCheckedFeed extends Migration {
 	{
 		Schema::table('feeds', function(Blueprint $table){
 			$table->timestamp('last_checked')->after('image_id');
+			$table->string('link');
 			$table->unique('url');
+			
+		});
+		
+		Schema::table('paragrahs', function(Blueprint $table){
+			$table->rename('paragraphs');
 		});
 	}
 
@@ -27,6 +33,7 @@ class AddLastCheckedFeed extends Migration {
 	{
 		Schema::table('feeds', function(Blueprint $table){
 			$table->dropColumn('last_checked');
+			$table->dropColumn('link');
 		});
 	}
 
