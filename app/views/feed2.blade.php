@@ -9,11 +9,11 @@
         <script type='text/javascript' src="/js/script.js"></script>
     </head>
 
-    <body class="feed">
+    <body class="feed feed-2">
         
         <div class="side">
-
             <div class="logo"><span class="glyphicon glyphicon-globe"></span>source<span>news</span></div>
+            <span class="hello">Hello, USERNAME</span>
             
             <div class="categories">
                 <span class="title">Categories</span>
@@ -26,11 +26,23 @@
                 </ul>
             </div>
 
+            <div class="my-cats categories">
+                <span class="title">My RSS Feeds</span>
+                <ul>
+                    <li><a href="">Guardian</a></li>
+                </ul>
+                <div class="rss">
+                    <input type="text" name="rss" placeholder="URL"/>
+                    <div class="comment-add"><span class="glyphicon glyphicon-plus-sign"></span>Add an RSS feed URL</div>
+                </div>
+            </div>
+
             <div class="footer">
                 <a href="/logout">Logout</a>
             </div>
 
         </div>
+
 
         <div class="main">
 

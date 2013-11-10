@@ -140,17 +140,6 @@
                         <div class="comment">
                             <div class="column">
                                 <span class="image-circle"><img src="/img/samir.jpg"></span>
-                                <span class="indicator green"></span>
-                                <div class="vote-container">
-                                    <div class="direction">
-                                        <span class="count">3</span>
-                                        <span class="glyphicon glyphicon-chevron-up green"></span>
-                                    </div>
-                                    <div class="direction">
-                                        <span class="count">9</span>
-                                        <span class="glyphicon glyphicon-chevron-down red"></span>
-                                    </div>
-                                </div>
                             </div>
                             <div class="content">
                                 <span class="name">Samir Moussa</span>
@@ -162,8 +151,6 @@
                                 <textarea placeholder="What do you think?"></textarea>
                             </div>
                         </div>
-
-                        <div class="comment-add"><span class="glyphicon glyphicon-plus-sign"></span>Add a comment</div>
 
                     </div>
 
