@@ -12,9 +12,7 @@
 */
 
 /*Route::group(array ('before' => 'auth'), function (){ */
-	Route::get('/feed', function () {
-		return View::make('feed');
-	});
+	Route::get('/feed/{id?}',  'FeedController@showFeed');
 	
 	Route::get('article/{id}', 'ArticleController@showArticle');
 	

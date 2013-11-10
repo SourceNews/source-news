@@ -165,6 +165,7 @@
                         <div class="comment-add"><span class="glyphicon glyphicon-plus-sign"></span>Add a comment</div>
 
                     </div>
+
                 </div>
             </div>
 
@@ -177,6 +178,79 @@
             </article>
 
             <div class="general-comments-container">
+
+                <div class="view first">
+                    <div class="comments-container">
+                        <div class="comments-count">35 Comments</div>
+                        <div class="title">Agreeing comments</div>
+                        <div class="comment-list">
+                            <div class="comment">
+                                <div class="column">
+                                    <span class="image-circle"><img src="/img/henco.jpg"></span>
+                                    <span class="indicator red"></span>
+                                    <div class="vote-container">
+                                        <div class="direction">
+                                            <span class="count">18</span>
+                                            <span class="glyphicon glyphicon-chevron-up green"></span>
+                                        </div>
+                                        <div class="direction">
+                                            <span class="count">3</span>
+                                            <span class="glyphicon glyphicon-chevron-down red"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <span class="name">Henco Appel</span>
+                                    <div class="opinion">
+                                        <span class="choice">Agree</span>
+                                        <span class="separator">|</span>
+                                        <span class="choice">Disagree</span>
+                                    </div>
+                                    <textarea placeholder="What do you think?"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="view">
+                    <div class="comments-container">
+                        <div class="comments-count">12 Comments</div>
+                        <div class="title">Disagreeing comments</div>
+                        <div class="comment-list">
+                            <div class="comment">
+                                <div class="column">
+                                    <span class="image-circle"><img src="/img/henco.jpg"></span>
+                                    <span class="indicator red"></span>
+                                    <div class="vote-container">
+                                        <div class="direction">
+                                            <span class="count">18</span>
+                                            <span class="glyphicon glyphicon-chevron-up green"></span>
+                                        </div>
+                                        <div class="direction">
+                                            <span class="count">3</span>
+                                            <span class="glyphicon glyphicon-chevron-down red"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <span class="name">Henco Appel</span>
+                                    <div class="opinion">
+                                        <span class="choice">Agree</span>
+                                        <span class="separator">|</span>
+                                        <span class="choice">Disagree</span>
+                                    </div>
+                                    <textarea placeholder="What do you think?"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
             </div>
 
     	</div>
