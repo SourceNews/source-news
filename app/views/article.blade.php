@@ -98,6 +98,10 @@
 
             </div>
 
+            <div class="footer">
+                <a href="/logout">Logout</a>
+            </div>
+
     	</div>
 
     	<div class="main">
@@ -189,6 +193,11 @@
                 <p name="2">Oleg Kotov and Sergei Ryazansky took the unlit version of the torch through the hatch of the International Space Station at 1434 GMT.</p>
 
             </article>
+
+            <div class="general-comments-container">
+                hello
+            </div>
+
     	</div>
 
     </body>

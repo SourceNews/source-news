@@ -1139,6 +1139,24 @@ body {
 }
 
 
+/* footer */
+
+.side .footer {
+  margin-top: 100px;
+  text-align: left;
+}
+
+.side .footer a {
+  font-family: 'Raleway-SemiBold', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #5f748b;
+}
+
+.side .footer a:hover {
+  color: #ffffff;
+}
+
 
 
 /* ==========================================================================
@@ -1153,6 +1171,11 @@ body {
   border-bottom: 1px solid #29323c;
   font-size: 26px;
   color: #f9f9f9;
+}
+
+.logo .glyphicon {
+  font-size: 16px;
+  margin-right: 10px;
 }
 
 .logo span {
@@ -1463,7 +1486,7 @@ body {
 }
 
 article {
-  position: absolute;
+  float: left;
   left: 420px;
   right: 100px;
   margin-left: 25px;
@@ -1481,10 +1504,17 @@ article p {
 }
 
 .article .main {
-  position: relative;
-  left: 30px;
-  width: 1050px;
   padding-top: 50px;
+}
+
+
+/* bottom comments */
+
+.article .general-comments-container {
+  float: left;
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+  height: 200px;
 }
 
 

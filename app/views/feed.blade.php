@@ -12,8 +12,7 @@
     <body class="feed">
         
         <div class="side">
-            <div class="logo">source<span>news</span></div>
-          	<button><a href="/logout">Logout</a></button>
+            <div class="logo"><span class="glyphicon glyphicon-globe"></span>source<span>news</span></div>
             
             <div class="categories">
                 <span class="title">Categories</span>
@@ -24,6 +23,10 @@
                     <li><a href="">Science</a></li>
                     <li><a href="">Economics</a></li>
                 </ul>
+            </div>
+
+            <div class="footer">
+                <a href="/logout">Logout</a>
             </div>
 
         </div>

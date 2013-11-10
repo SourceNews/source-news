@@ -10,7 +10,7 @@
 
     <body class="login">
     	<div class="side">
-    		<div class="logo">source<span>news</span></div>
+    		<div class="logo"><span class="glyphicon glyphicon-globe"></span>source<span>news</span></div>
     		<div class="slogan">A place for everyone's opinion.</div>
     			<div class="signin">
     				<span class="option signup-btn">Register</span>
@@ -43,7 +43,8 @@
     	</div>
 
     	<div class="main">
-    		<div class="intro">Source News is a unique platform that provides an alternative way to reading the news. We encourage readers to support or question the views of news corporations and journalists through an effective inline commenting system and elegant interface, giving future readers a more balanced opinion across a broad range of topics. Our aim is to leverage discussion and better inform the world.</div>
+    		<div class="intro">
+            Source News is a unique platform that provides an alternative way to reading the news. We encourage readers to support or question the views of news corporations and journalists through an effective inline commenting system and elegant interface, giving future readers a more balanced opinion across a broad range of topics.<br>Our aim is to leverage discussion and better inform the world.</div>
     	</div>
 
     </body>
