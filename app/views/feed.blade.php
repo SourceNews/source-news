@@ -15,6 +15,17 @@
             <div class="logo">source<span>news</span></div>
           	<button><a href="/logout">Logout</a></button>
             
+            <div class="categories">
+                <span class="title">Categories</span>
+                <ul>
+                    <li><a href="">Technology</a></li>
+                    <li><a href="">Politics</a></li>
+                    <li><a href="">Sport</a></li>
+                    <li><a href="">Science</a></li>
+                    <li><a href="">Economics</a></li>
+                </ul>
+            </div>
+
         </div>
 
         <div class="main">
