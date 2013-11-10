@@ -68,11 +68,12 @@ $(function() {
 		// hide tooltip
 	   $tooltip.css('opacity', 0);
 
-	   if (e.target.id == "comments-sidebar") {
-	   	return;
+	   if($(e.target).is('#comments-sidebar *') )
+	   {
+		return;
 	   }
-	   $('.article').removeClass('commenting');
     	$("#comments-sidebar").css('top', 'auto');
+    	$('.article').removeClass('commenting');
 
 	});
 

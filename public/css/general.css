@@ -1080,6 +1080,7 @@ button:hover {
 body {
   position: relative;
   margin: 0;
+  max-width: 1300px;
 }
 
 .login {
@@ -1104,6 +1105,11 @@ body {
   -webkit-box-shadow: inset -5px 0 12px -6px #000;
   box-shadow: inset -5px 0 12px -6px #000;
   overflow: scroll;
+}
+
+.side::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .back-btn {
@@ -1219,8 +1225,11 @@ body {
 
 .feed .side,
 .article .side {
-  width: 220px;
   font-size: 14px;
+}
+
+.feed .side {
+  width: 220px;
 }
 
 .feed .main,
@@ -1282,6 +1291,12 @@ body {
   border-right: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   overflow: scroll;
+}
+
+.feed::-webkit-scrollbar,
+.feed .column::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .feed .column.col-1 {
@@ -1421,10 +1436,6 @@ body {
     Article Content
 ========================================================================== */
 
-.article.commenting {
-  overflow: hidden;
-}
-
 /* comments sidebar */
 
 #comments-sidebar {
@@ -1435,7 +1446,9 @@ body {
 }
 
 .article.commenting #comments-sidebar {
+  z-index: 2;
   opacity: 1;
+  left: 50px;
 }
 
 .article h1 {
@@ -1458,14 +1471,13 @@ article p {
   margin: 15px 0;
 }
 
+.article.commenting .side {
+  opacity: 0
+}
+
 .article .main {
   position: relative;
   left: 0px;
-}
-
-.article.commenting .main {
-  left: 350px;
-  -webkit-transition: all 0.8s ease-in-out;
 }
 
 
@@ -1504,6 +1516,10 @@ article p {
     Comments
 ========================================================================== */
 
+.test .side {
+  display: none;
+}
+
 /* sidebar top comments */
 
 .side .comment-list {
@@ -1512,14 +1528,19 @@ article p {
 }
 
 .side .comment .name,
-.side .comment .opinion {
+.side .comment .opinion,
+.side .comment .vote-container .glyphicon {
   color: #ffffff;
 }
+
+.side .comment .content {
+  width: 170px;
+} 
 
 /* standard comments */
 
 .comments-container {
-  width: 300px;
+  width: 350px;
 }
 
 .comment-list {
@@ -1546,11 +1567,10 @@ article p {
 }
 
 .comment .vote-container {
-  position: absolute;
+  float: left;
   text-align: right;
-  top: 5px;
-  right: 320px;
   width: 50px;
+  margin-right: 15px;
 }
 
 .comment .vote-container .count {
@@ -1579,12 +1599,11 @@ article p {
 }
 
 .comment .column {
-  width: 12%;
-  margin-right: 5%
+  margin-right: 5px;
 }
 
 .comment .content {
-  width: 83%;
+  width: 235px;
 }
 
 .comment .column .indicator {
