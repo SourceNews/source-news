@@ -14,6 +14,7 @@
         <div class="side">
 
             <div class="logo"><span class="glyphicon glyphicon-globe"></span>source<span>news</span></div>
+            <span class="hello">Hello, {{$user->username}}</span>
             
             <div class="categories">
                 <span class="title">Categories</span>
@@ -25,7 +26,31 @@
                     <li><a href="">Economics</a></li>
                 </ul>
             </div>
-
+            
+            <div class="my-cats categories">
+            	@if(isset($feed) && is_object($feed))
+	                <span class="title">My RSS Feeds</span>
+	                <ul>
+	                    <li><a href="/feed/{{$feed->id}}">Guardian</a></li>
+	                </ul>
+	            @endif
+                <div class="rss">
+                	{{ Form::open(array ('action' => 'RssFeedController@loadRss', 'method' => 'get')) }}
+                    <input type="text" name="rss" placeholder="URL"/>
+                    <div class="comment-add" id="rss-add"><span class="glyphicon glyphicon-plus-sign"></span>Add an RSS feed URL</div>
+                    {{ Form::close() }}
+                    
+					<script type="text/javascript">
+						$(document).ready(function(){
+							$("#rss-add").onclick(function(event){
+								$(this).closest("form").submit();
+							});	
+						});
+					</script>                    
+              	</div>
+             </div>
+            
+            
             <div class="footer">
                 <a href="/logout">Logout</a>
             </div>
