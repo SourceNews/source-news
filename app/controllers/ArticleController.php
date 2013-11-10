@@ -8,7 +8,6 @@ class ArticleController extends \BaseController
         $title = $art->title;
         $paragraphs = Paragraph::where(
         	'article_id', '=', $id)->orderBy('index')->get();
-        error_log($paragraphs);
 
         return View::make('article', compact("title", "paragraphs"));
     }
