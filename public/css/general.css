@@ -1573,6 +1573,10 @@ article p {
   margin-right: 15px;
 }
 
+.general-comments-container .comment .content {
+  width: 344px;
+}
+
 
 /* ==========================================================================
     Tooltips
@@ -1717,7 +1721,7 @@ article p {
 }
 
 .comment .content {
-  width: 344px;
+  width: 253px;
 }
 
 .comment .column .indicator {
