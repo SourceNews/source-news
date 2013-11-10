@@ -4,9 +4,9 @@
 	<head>
         <title>Source News</title>
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
-        <link href="./css/general.css" rel="stylesheet" media="screen">
-        <script type='text/javascript' src="./js/jquery-1.10.1.min.js"></script>
-        <script type='text/javascript' src="./js/script.js"></script>
+        <link href="/css/general.css" rel="stylesheet" media="screen">
+        <script type='text/javascript' src="/js/jquery-1.10.1.min.js"></script>
+        <script type='text/javascript' src="/js/script.js"></script>
     </head>
 
     <body class="article">
@@ -71,7 +71,7 @@
                 
                 <div class="comment">
                     <div class="column">
-                        <span class="image-circle"><img src="img/henco.jpg"></span>
+                        <span class="image-circle"><img src="/img/henco.jpg"></span>
                         <span class="indicator red"></span>
                         <div class="vote-container">
                             <div class="direction">
@@ -112,7 +112,7 @@
                     <div class="comment-list">
                         <div class="comment">
                             <div class="column">
-                                <span class="image-circle"><img src="img/henco.jpg"></span>
+                                <span class="image-circle"><img src="/img/henco.jpg"></span>
                                 <span class="indicator red"></span>
                                 <div class="vote-container">
                                     <div class="direction">
@@ -138,7 +138,7 @@
 
                         <div class="comment">
                             <div class="column">
-                                <span class="image-circle"><img src="img/samir.jpg"></span>
+                                <span class="image-circle"><img src="/img/samir.jpg"></span>
                                 <span class="indicator green"></span>
                                 <div class="vote-container">
                                     <div class="direction">
@@ -170,28 +170,10 @@
 
             <article>
 
-                <h1>Sochi Olympic torch taken on historic spacewalk</h1>
-
-                <p name="1">Two Russian cosmonauts are taking the torch for the Sochi Winter Olympics on its first historic spacewalk, ahead of next year's games in Russia.</p>
-
-                <p name="2">Oleg Kotov and Sergei Ryazansky took the unlit version of the torch through the hatch of the International Space Station at 1434 GMT.</p>
-
-                <p name="1">Two Russian cosmonauts are taking the torch for the Sochi Winter Olympics on its first historic spacewalk, ahead of next year's games in Russia.</p>
-
-                <p name="2">Oleg Kotov and Sergei Ryazansky took the unlit version of the torch through the hatch of the International Space Station at 1434 GMT.</p>
-
-                <p name="1">Two Russian cosmonauts are taking the torch for the Sochi Winter Olympics on its first historic spacewalk, ahead of next year's games in Russia.</p>
-
-                <p name="2">Oleg Kotov and Sergei Ryazansky took the unlit version of the torch through the hatch of the International Space Station at 1434 GMT.</p>
-
-                <p name="1">Two Russian cosmonauts are taking the torch for the Sochi Winter Olympics on its first historic spacewalk, ahead of next year's games in Russia.</p>
-
-                <p name="2">Oleg Kotov and Sergei Ryazansky took the unlit version of the torch through the hatch of the International Space Station at 1434 GMT.</p>
-
-                <p name="1">Two Russian cosmonauts are taking the torch for the Sochi Winter Olympics on its first historic spacewalk, ahead of next year's games in Russia.</p>
-
-                <p name="2">Oleg Kotov and Sergei Ryazansky took the unlit version of the torch through the hatch of the International Space Station at 1434 GMT.</p>
-
+                <h1>{{ $title }}</h1>
+                @foreach ($paragraphs as $p)
+                    {{"<p name=\"$p->id\">$p->text</p>"}}
+                @endforeach
             </article>
 
             <div class="general-comments-container">

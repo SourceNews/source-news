@@ -35,11 +35,15 @@ class DatabaseSchema extends Migration {
 			$table->increments('id');
 			$table->string('title');
 			$table->string('url')->unqiue();
+			$table->string('link');			
 			$table->string('description')->nullable();
 			$table->string('language', 5)->nullable();
 			$table->text('copyright')->nullable();
 			$table->integer('image_id')->unsigned()->nullable();
+			$table->timestamp('last_checked');				
 			$table->timestamps();
+			
+			$table->unique('url');
 			
 			$table->foreign('image_id')
 				->references('id')
@@ -54,14 +58,20 @@ class DatabaseSchema extends Migration {
 		
 		Schema::create('articles', function(Blueprint $table){
 			$table->increments('id');
+			$table->integer('feed_id')->unsigned();		
 			$table->string('title');
-			$table->time('pub_time');
+			$table->text('description');
+			$table->timestamp('pub_time');
 			$table->string('url')->unique();
 			$table->string('subject')->nullable()->nullable();
 			$table->integer('author_id')->unsigned()->nullable();
 			$table->integer('thumb_id')->unsigned()->nullable();
-			$table->integer('image_id')->unsigned();
+			$table->integer('image_id')->unsigned()->nullable();
 			$table->timestamps();
+			
+			$table->foreign('feed_id')->references('id')->on('feeds')
+				->onDelete('cascade')
+				->onUpdate('cascade');
 			
 			$table->foreign('image_id')
 			->references('id')
@@ -80,7 +90,7 @@ class DatabaseSchema extends Migration {
 		
 		
 		
-		Schema::create('paragrahs', function(Blueprint $table){
+		Schema::create('paragraphs', function(Blueprint $table){
 			$table->increments('id');
 			$table->integer('article_id')->unsigned();
 			$table->text('text');
@@ -107,7 +117,7 @@ class DatabaseSchema extends Migration {
 			
 			$table->foreign('paragraph_id')
 					->references('id')
-					->on('paragrahs')
+					->on('paragraphs')
 					->onDelete('cascade')
 					->onUpdate('cascade');
 		});
@@ -245,7 +255,7 @@ class DatabaseSchema extends Migration {
 		Schema::drop('paragraph_section_comment');
 		Schema::drop('paragraph_sections');
 		Schema::drop('comments');
-		Schema::drop('paragrahs');
+		Schema::drop('paragraphs');
 		Schema::drop('articles');
 		Schema::drop('authors');
 		Schema::drop('feeds');
