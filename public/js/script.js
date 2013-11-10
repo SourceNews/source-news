@@ -131,6 +131,7 @@ $(function() {
 
 		var $form = $('form');
 		var $emailField = $('#email_field');
+		var $btn = $('#submit_btn');
 
 		$emailField.hide();
 
@@ -139,12 +140,15 @@ $(function() {
 
 		$form.attr('action', '/login');
 
+		$btn.text('Login');
+
 	});
 
 	$( ".signup-btn" ).on('click', function(){
 
 		var $form = $('form');
 		var $emailField = $('#email_field');
+		var $btn = $('#submit_btn');
 
 		$emailField.show();
 
@@ -152,6 +156,8 @@ $(function() {
 		$( ".signin-btn" ).removeClass('open');
 
 		$form.attr('action', '/register');
+
+		$btn.text('Create Account');
 
 	});
 

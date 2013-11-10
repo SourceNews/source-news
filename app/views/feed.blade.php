@@ -38,7 +38,6 @@
 
                 <div class="list">
                     <div class="top story">
-                        <!--<a class="image" href=""><img src=""></a>-->
                         <h2>Sochi Olympic torch taken on historic spacewalk</h2>
                     </div>
 
