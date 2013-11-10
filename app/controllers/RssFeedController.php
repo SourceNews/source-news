@@ -8,30 +8,27 @@ use \Debril\RssAtomBundle\Driver\HttpCurlDriver;
 class RssFeedController extends \BaseController {
 
 	protected $driver;
-
-	protected $layout = 'rss';
 	
 	public function loadRss(){
 		$url = Input::get('rss_url', 'http://feeds.theguardian.com/theguardian/uk-news/rss');
-		$url = 'http://feeds.theguardian.com/theguardian/uk-news/rss';
-		// fetch the FeedReader
+		
+		if(!is_object($feed = Feed::where('url', '=', $url)->first())){
+			$feed = new Feed();
+			$feed->url = $url;
+		}
+		
+		$last_modified = isset($feed->last_checked)? new DateTime(date("Y-m-d")) : new DateTime(date("Y-m-d", time()-604800));
+		
 		$reader = new FeedReader(new HttpCurlDriver(), new Factory());
 		$reader->addParser(new RssParser());
-	    $date = new DateTime("2013-11-08");
-
+	    
 	    // now fetch its (fresh) content
-	    $feed = $reader->getFeedContent($url, $date);
-
-	    $this->layout->content = $feed->getItems();
-	}
-
-	function splitContent($html){
-		$html = html_entity_decode($html);
-		$html = preg_replace("#</p>#", "\n", $html);
-		$html = preg_replace("#<div class=\"related\".*#", "", $html);
-		$html = preg_replace("#</?\w+\s*[^>]*?>#", "", $html);
-		$html = preg_split("#\n#", $html, 0, PREG_SPLIT_NO_EMPTY);
-		return $html;
+	    $feedContent = $reader->readFeed($url, $feed, $last_modified);
+	    if($feed->save()){
+			
+	    } 	    	    
+	    
+	  //	$articles = $feedContent->getItems();
 	}
 
 	function storeFeed($feed){
