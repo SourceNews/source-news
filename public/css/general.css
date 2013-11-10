@@ -1151,15 +1151,27 @@ body {
   text-align: left;
 }
 
-.side .footer a {
+.side .footer a,
+.home-btn {
   font-family: 'Raleway-SemiBold', Helvetica, Arial, sans-serif;
   font-size: 13px;
   text-transform: uppercase;
   color: #5f748b;
 }
 
+.home-btn {
+  display: block;
+  margin-top: 50px;
+  padding: 10px;
+  border-top: 1px solid #29323c;
+  border-bottom: 1px solid #29323c;
+}
+
+.home-btn:hover,
 .side .footer a:hover {
   color: #ffffff;
+  color: #ffffff;
+  background-color: #181e24;
 }
 
 

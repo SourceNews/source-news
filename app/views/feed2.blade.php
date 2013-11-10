@@ -15,6 +15,7 @@
         <div class="side">
             <div class="logo"><span class="glyphicon glyphicon-globe"></span>source<span>news</span></div>
             <span class="hello">Hello, {{$user->username}}</span>
+            <a class="home-btn" href="">Home</a>
             
             <div class="categories">
                 <span class="title">Categories</span>
