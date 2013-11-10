@@ -17,4 +17,4 @@ To install it you will need to clone the repository using:
 
 Then run `composer install` which will download the required PHP dependencies and setup Laravel.
 
-The database connection can be configured from within config/database.php. Once that is done, run `php artisan migrate` from the terminal so that the database tables are created. 
+The database connection can be configured from within `config/database.php`. Once that is done, run `php artisan migrate` from the terminal so that the database tables are created. 
