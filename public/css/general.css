@@ -1231,6 +1231,40 @@ body {
     Feed
 ========================================================================== */
 
+.feed .categories {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.feed .categories .title {
+  display: block;
+  padding: 15px;
+  font-family: 'Raleway-SemiBold', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.feed .categories ul {
+  border-top: 1px solid #29323c;
+}
+
+.feed .categories li {
+  width: 100%;
+  border-bottom: 1px solid #29323c;
+}
+
+.feed .categories a {
+  display: block;
+  padding: 15px;
+}
+
+.feed .categories a:hover {
+  color: #ffffff;
+  background-color: #181e24;
+}
+
+/* main */
+
 .feed .main {
   position: relative;
   padding: 0;
