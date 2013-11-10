@@ -16,12 +16,12 @@
         </div>
         
     	<div class="side">
-            <div class="back-btn"><span class="glyphicon glyphicon-chevron-left"></span>Back to news feed</div>
+            <div class="back-btn"><a href="/feed/{{ $article->feed->id }}"><span class="glyphicon glyphicon-chevron-left"></span>Back to news feed</a></div>
             <div class="source-info">
                 <ul>
-                    <li><span>Date</span>3rd August 2013, 13:00</li>
-                    <li><span>Source</span>BBC News</li>
-                    <li><span>URL</span><a href="">www.bbc.co.uk</a></li>
+                    <li><span>Date</span>{{ date('l jS \of F Y h:i:s A', strtotime($article->pub_time)) }}</li>
+                    <li><span>Source</span>{{ $article->feed->title }}</li>
+                    <li><span>URL</span><a href="{{ $article->feed->link }}">{{ $article->feed->link }}</li>
                 </ul>
             </div>
             <div class="stats">
@@ -171,7 +171,7 @@
 
             <article>
 
-                <h1>{{ $title }}</h1>
+                <h1>{{ $article->title }}</h1>
                 @foreach ($paragraphs as $p)
                     {{"<p name=\"$p->id\">$p->text</p>"}}
                 @endforeach

@@ -4,11 +4,9 @@ class ArticleController extends \BaseController
 {
 
     public function showArticle($id) {
-    	$art = Article::find($id);
-        $title = $art->title;
-        $paragraphs = Paragraph::where(
-        	'article_id', '=', $id)->orderBy('index')->get();
+    	$article = Article::find($id);
+        $paragraphs = $article->paragraphs()->get();
 
-        return View::make('article', compact("title", "paragraphs"));
+        return View::make('article', compact("paragraphs", "article"));
     }
 }
