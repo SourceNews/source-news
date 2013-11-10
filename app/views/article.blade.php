@@ -44,15 +44,15 @@
                 
                 <div class="comment">
                     <div class="column">
-                        <span class="image-circle"><img src="img/henco.jpg"></span>
+                        <span class="image-circle"><img src="/img/henco.jpg"></span>
                         <span class="indicator red"></span>
                         <div class="vote-container">
                             <div class="direction">
-                                <span class="count">18</span>
+                                <span class="count">98</span>
                                 <span class="glyphicon glyphicon-chevron-up green"></span>
                             </div>
                             <div class="direction">
-                                <span class="count">3</span>
+                                <span class="count">18</span>
                                 <span class="glyphicon glyphicon-chevron-down red"></span>
                             </div>
                         </div>
@@ -71,21 +71,21 @@
                 
                 <div class="comment">
                     <div class="column">
-                        <span class="image-circle"><img src="/img/henco.jpg"></span>
+                        <span class="image-circle"><img src="/img/samir.jpg"></span>
                         <span class="indicator red"></span>
                         <div class="vote-container">
                             <div class="direction">
-                                <span class="count">18</span>
+                                <span class="count">74</span>
                                 <span class="glyphicon glyphicon-chevron-up green"></span>
                             </div>
                             <div class="direction">
-                                <span class="count">3</span>
+                                <span class="count">12</span>
                                 <span class="glyphicon glyphicon-chevron-down red"></span>
                             </div>
                         </div>
                     </div>
                     <div class="content">
-                        <span class="name">Henco Appel</span>
+                        <span class="name">Samir Moussa</span>
                         <span class="desc">
                             Here is some comment
                             Here is some comment
@@ -127,12 +127,13 @@
                             </div>
                             <div class="content">
                                 <span class="name">Henco Appel</span>
-                                <div class="opinion">
-                                    <span class="choice">Agree</span>
-                                    <span class="separator">|</span>
-                                    <span class="choice">Disagree</span>
-                                </div>
-                                <textarea placeholder="What do you think?"></textarea>
+                                <span class="desc">
+                                    Here is some comment
+                                    Here is some comment
+                                    Here is some comment
+                                    Here is some comment
+                                    Here is some comment
+                                </span>
                             </div>
                         </div>
 
@@ -187,7 +188,7 @@
                             <div class="comment">
                                 <div class="column">
                                     <span class="image-circle"><img src="/img/henco.jpg"></span>
-                                    <span class="indicator red"></span>
+                                    <span class="indicator green"></span>
                                     <div class="vote-container">
                                         <div class="direction">
                                             <span class="count">18</span>
@@ -201,6 +202,32 @@
                                 </div>
                                 <div class="content">
                                     <span class="name">Henco Appel</span>
+                                    <span class="desc">
+                                        Here is some comment
+                                        Here is some comment
+                                        Here is some comment
+                                        Here is some comment
+                                        Here is some comment
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="column">
+                                    <span class="image-circle"><img src="/img/samir.jpg"></span>
+                                    <span class="indicator green"></span>
+                                    <div class="vote-container">
+                                        <div class="direction">
+                                            <span class="count">9</span>
+                                            <span class="glyphicon glyphicon-chevron-up green"></span>
+                                        </div>
+                                        <div class="direction">
+                                            <span class="count">2</span>
+                                            <span class="glyphicon glyphicon-chevron-down red"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    <span class="name">Samir Moussa</span>
                                     <span class="desc">
                                         Here is some comment
                                         Here is some comment
@@ -239,7 +266,7 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <span class="name">Henco Appel</span>
+                                    <span class="name">Kostadin Stoilov</span>
                                     <span class="desc">
                                         Here is some comment
                                         Here is some comment

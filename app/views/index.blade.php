@@ -27,7 +27,7 @@
 	    			<input type="password" name="password" placeholder="Password"/>
 	    				<span class="error">@if($errors->has('password')) {{ $errors->first('password') }} @endif</span>
 	                <div class="form-buttons">
-	                    <button type="subimit">Register</button>
+	                    <button id="submit_btn" type="submit">Register</button>
 	                    <button class="login-social first">Facebook</button>
 	                    <button class="login-social">Twitter</button>
 	                </div>
@@ -37,7 +37,8 @@
 
     	<div class="main">
     		<div class="intro">
-            Source News is a unique platform that provides an alternative way to reading the news. We encourage readers to support or question the views of news corporations and journalists through an effective inline commenting system and elegant interface, giving future readers a more balanced opinion across a broad range of topics.<br>Our aim is to leverage discussion and better inform the world.</div>
+                <span class="glyphicon glyphicon-globe"></span><br>
+            Source News is a unique platform that provides an alternative way to reading the news.<br><br>We encourage readers to support or question the views of news corporations and journalists through an effective inline commenting system and elegant interface, giving future readers a more balanced opinion across a broad range of topics.<br><br>Our aim is to leverage discussion and better inform the world.</div>
     	</div>
 
     </body>

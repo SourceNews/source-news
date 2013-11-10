@@ -13,6 +13,7 @@
         
         <div class="side">
             <div class="logo"><span class="glyphicon glyphicon-globe"></span>source<span>news</span></div>
+            <span class="hello">Hello, USERNAME</span>
             
             <div class="categories">
                 <span class="title">Categories</span>
@@ -23,6 +24,17 @@
                     <li><a href="">Science</a></li>
                     <li><a href="">Economics</a></li>
                 </ul>
+            </div>
+
+            <div class="my-cats categories">
+                <span class="title">My RSS Feeds</span>
+                <ul>
+                    <li><a href="">Guardian</a></li>
+                </ul>
+                <div class="rss">
+                    <input type="text" name="rss" placeholder="URL"/>
+                    <div class="comment-add"><span class="glyphicon glyphicon-plus-sign"></span>Add an RSS feed URL</div>
+                </div>
             </div>
 
             <div class="footer">
@@ -38,7 +50,6 @@
 
                 <div class="list">
                     <div class="top story">
-                        <!--<a class="image" href=""><img src=""></a>-->
                         <h2>Sochi Olympic torch taken on historic spacewalk</h2>
                     </div>
 
