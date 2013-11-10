@@ -16,7 +16,7 @@
         </div>
         
     	<div class="side">
-            <div class="back-btn"><span class="glyphicon glyphicon-chevron-left"></span>Back to news feed</div>
+            <div class="back-btn"><a href="/feed/{{ $article->feed->id }}"><span class="glyphicon glyphicon-chevron-left"></span>Back to news feed</a></div>
             <div class="source-info">
                 <ul>
                     <li><span>Date</span>{{ date('l jS \of F Y h:i:s A', strtotime($article->pub_time)) }}</li>
