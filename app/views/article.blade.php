@@ -22,7 +22,7 @@
                 <ul>
                     <li><span>Date</span>{{ date('l jS \of F Y h:i:s A', strtotime($article->pub_time)) }}</li>
                     <li><span>Source</span>{{ $article->feed->title }}</li>
-                    <li><span>URL</span><a href="{{ $article->feed->link }}">{{ $article->feed->link }}</li>
+                    <li><span>URL</span><a href="{{ $article->feed->link }}">{{ $article->feed->link }}</a></li>
                 </ul>
             </div>
             <div class="stats">
