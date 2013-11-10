@@ -20,10 +20,6 @@
 		return View::make('test');
 	});
 	
-	Route::get('js-test', function(){
-		return View::make('js-test');
-	});
-	
 	Route::get('/logout', 'UserController@logout');
 		
 /* }); */
