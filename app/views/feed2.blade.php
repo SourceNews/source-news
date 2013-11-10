@@ -43,7 +43,7 @@
                     
 					<script type="text/javascript">
 						$(document).ready(function(){
-							$("#rss-add").onclick(function(event){
+							$("#rss-add").click(function(event){
 								$(this).closest("form").submit();
 							});	
 						});
